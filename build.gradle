@@ -20,19 +20,18 @@ dependencies {
     // logging
     implementation "org.slf4j:slf4j-api:${commonGradleSlf4jApiVersion}"
 
-    // utilities    
-    //implementation "net.sf.jptools:jptools:${commonGradleJptoolsVersion}"
-    //implementation "net.sf.jptools:jptools:${commonGradleJptoolsVersion}:slf4j-redirect"
-
     // resteasy
     implementation 'io.quarkus:quarkus-resteasy-jackson'
 
     // security
     //implementation 'io.quarkus:quarkus-oidc'
+    implementation 'io.quarkus:quarkus-keycloak-admin-client'
     //testImplementation 'io.quarkus:quarkus-test-security'
 
     // readiness and liveness probe support
     implementation 'io.quarkus:quarkus-smallrye-health'
+
+    implementation 'com.shopbee.sb:sb-keycloak-adapter-service-api-spec:0.0.3'
 
     // orm
     //implementation 'io.quarkus:quarkus-hibernate-orm'
