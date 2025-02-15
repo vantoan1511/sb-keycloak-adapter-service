@@ -1,0 +1,6 @@
+/*
+ * *$
+ *
+ * Copyright by sb-keycloak-adapter-service, all rights reserved.
+ * MIT License: https://mit-license.org
+ */
