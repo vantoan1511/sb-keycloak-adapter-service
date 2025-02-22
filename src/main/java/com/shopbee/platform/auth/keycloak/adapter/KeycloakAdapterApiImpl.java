@@ -5,9 +5,10 @@
  * MIT License: https://mit-license.org
  */
 
-package com.shopbee.sb.keycloak.adapter.service.impl;
+package com.shopbee.platform.auth.keycloak.adapter;
 
 import com.shopbee.sb.keycloak.adapter.service.api.spec.v0.api.RealmsApi;
+import com.shopbee.sb.keycloak.adapter.service.api.spec.v0.dto.CreateUserRequest;
 import com.shopbee.sb.keycloak.adapter.service.api.spec.v0.dto.UpdateUserByIdRequest;
 import jakarta.validation.Valid;
 import jakarta.ws.rs.Path;
@@ -17,10 +18,10 @@ import jakarta.ws.rs.core.Response;
  * The type Keycloak adapter service api.
  */
 @Path("/realms/{realmName}")
-public class KeycloakAdapterServiceApiImpl implements RealmsApi {
+public class KeycloakAdapterApiImpl implements RealmsApi {
 
     @Override
-    public Response createUser(String realmName, com.shopbee.sb.keycloak.adapter.service.api.spec.v0.dto.@Valid CreateUserRequest createUserRequest) {
+    public Response createUser(String realmName, @Valid CreateUserRequest createUserRequest) {
         return null;
     }
 
