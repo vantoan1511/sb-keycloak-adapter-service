@@ -13,12 +13,22 @@ import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.ext.ExceptionMapper;
 import jakarta.ws.rs.ext.Provider;
 
+/**
+ * The type Keycloak adapter exception mapper.
+ * This class is responsible for mapping KeycloakAdapterException to a JAX-RS Response.
+ */
 @Provider
 public class KeycloakAdapterExceptionMapper implements ExceptionMapper<KeycloakAdapterException> {
 
+    /**
+     * Converts a KeycloakAdapterException to a JAX-RS Response.
+     *
+     * @param keycloakAdapterException the KeycloakAdapterException to be mapped
+     * @return a Response object containing the error message and status code
+     */
     @Override
-    public Response toResponse(KeycloakAdapterException e) {
-        ErrorResponse errorResponse = new ErrorResponse(e.getMessage());
-        return Response.status(e.getResponse().getStatus()).entity(errorResponse).build();
+    public Response toResponse(KeycloakAdapterException keycloakAdapterException) {
+        ErrorResponse errorResponse = new ErrorResponse(keycloakAdapterException.getMessage());
+        return Response.status(keycloakAdapterException.getResponse().getStatus()).entity(errorResponse).build();
     }
 }

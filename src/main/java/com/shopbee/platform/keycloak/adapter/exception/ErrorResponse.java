@@ -7,5 +7,8 @@
 
 package com.shopbee.platform.keycloak.adapter.exception;
 
+/**
+ * The type Error response.
+ */
 public record ErrorResponse(String message) {
 }

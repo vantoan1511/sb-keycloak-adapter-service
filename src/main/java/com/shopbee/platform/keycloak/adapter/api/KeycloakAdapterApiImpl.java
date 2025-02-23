@@ -26,6 +26,12 @@ public class KeycloakAdapterApiImpl implements RealmsApi {
     private final KeycloakAdapterService keycloakAdapterService;
     private final UriInfo uriInfo;
 
+    /**
+     * Instantiates a new Keycloak adapter api.
+     *
+     * @param keycloakAdapterService the keycloak adapter service
+     * @param uriInfo                the uri info
+     */
     @Inject
     public KeycloakAdapterApiImpl(KeycloakAdapterService keycloakAdapterService, UriInfo uriInfo) {
         this.keycloakAdapterService = keycloakAdapterService;

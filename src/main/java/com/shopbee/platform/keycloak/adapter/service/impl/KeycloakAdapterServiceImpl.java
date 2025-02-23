@@ -92,10 +92,23 @@ public class KeycloakAdapterServiceImpl implements KeycloakAdapterService {
         }
     }
 
+    /**
+     * Gets user resource.
+     *
+     * @param realmName the realm name
+     * @param userId    the user id
+     * @return the user resource
+     */
     private UserResource getUserResource(String realmName, String userId) {
         return getUsersResource(realmName).get(userId);
     }
 
+    /**
+     * Gets users resource.
+     *
+     * @param realmName the realm name
+     * @return the users resource
+     */
     private UsersResource getUsersResource(String realmName) {
         return keycloak.realm(realmName).users();
     }
