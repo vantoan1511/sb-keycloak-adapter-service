@@ -20,6 +20,15 @@ dependencies {
     // logging
     implementation "org.slf4j:slf4j-api:${commonGradleSlf4jApiVersion}"
 
+    implementation 'org.apache.commons:commons-lang3'
+    implementation 'io.quarkus:quarkus-hibernate-validator'
+    implementation 'org.mapstruct:mapstruct:1.5.5.Final'
+    implementation 'org.projectlombok:lombok-mapstruct-binding:0.2.0'
+
+    compileOnly 'org.projectlombok:lombok:1.18.36'
+    annotationProcessor 'org.projectlombok:lombok:1.18.36'
+    annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.5.Final'
+
     // resteasy
     implementation 'io.quarkus:quarkus-resteasy-jackson'
 
